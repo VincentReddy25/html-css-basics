@@ -1,0 +1,275 @@
+# HTML, CSS Notes
+
+---
+
+## HTML (HyperText Markup Language)
+
+- Structure of a webpage.
+- Two ways to represent tags:
+  1. Normal tag → <tag> </tag>
+  2. Self-closing tag / Empty tag → <tag />
+
+Boilerplate (Shift + ! in VS Code)
+
+- <!DOCTYPE html> : represents HTML5 (2016)
+- <html> : root element
+- <head> : meta info (title, links, etc.)
+- <title> : name of document
+- <link> : connects external files
+- <body> : UI (where user interacts)
+
+Difference between a web page and website :
+A webpage is single page, distinct document on the web with its own URL, while a website is a collection of multiple interconnected webpages, all linked together and hosted under a single domain name.
+Basic Tags:
+
+- Paragraph → <p></p>
+- Headings → <h1> to <h6>
+- Image → <img src="path" alt="description of the image" />
+- Anchor (link) → <a href="url" target="_blank">Link</a>
+- Multimedia → <audio>, <video>, <iframe>
+
+Text Formatting:
+
+- <b>, <i>, <u>, <s>, <small>, <mark>, <sub>, <sup>
+
+Semantic Elements (SEO friendly):These elements are more important to the browser, it increases the SEO(Search Engine Optimization)
+
+- <strong>, <em>, <ins>, <del>
+- <nav>, <section>, <header>, <footer>, <article>, <main>, <aside>
+
+Non-Semantic Elements:
+
+- <div>, <span>
+
+Tables:
+
+- <table>, <tr>(table row), <th>(table heading), <td>(table data), <thead>(table heading), <tbody>(table body), <tfoot>(table footer)
+- rowspan → merge rows
+- colspan → merge columns
+
+Lists:
+
+1. Ordered list → <ol><li></li></ol>
+2. Unordered list → <ul><li></li></ul>
+3. Description list → <dl><dt></dt><dd></dd></dl>
+
+Forms:used to collect the data from the user
+
+- Input types → text, password, email, number, radio, checkbox, file, date, color, button, submit etc
+- Attributes → action, method, id, name, value, placeholder, required, disabled, selected etc
+- <fieldset>, <legend>
+
+---
+
+## CSS (Cascading Style Sheets)
+
+- Styles & design for webpages.
+
+Ways to Apply CSS:
+
+1. Inline → <h1 style="color:red;">Hello</h1>
+2. Internal → inside <style> in head
+3. External → link external .css file
+
+CSS Syntax:
+selector {
+  property: value;
+}
+
+Selector → chooses the HTML element to style
+Property → the aspect to style (like color, margin, font)
+Value → how it should look (e.g., red, 20px)
+
+CSS Selectors
+
+- - → Universal selector (styles all elements)
+- element → Selects specific HTML tags (p {} applies to all <p> tags)
+- .class → Selects elements by class name
+- #id → Selects element by unique ID
+- [attribute] → Selects elements with a specific attribute
+- h1, h2, .para → Group selector (applies the same style to multiple tags)
+
+- div p → Descendant selector (all <p> inside <div>)
+- div > p → Child selector (direct <p> inside <div>)
+- h1 + p → Adjacent sibling (first <p> immediately after <h1>)
+- h1 ~ p → General sibling (all <p> after <h1> within the same parent)
+
+Colors in CSS
+
+- Name → red, blue
+- Hex → #ff0000 (commonly used in web design)
+- RGB → rgb(255,0,0) (red, green, blue values)
+- RGBA → rgba(255,0,0,0.5) (RGB with transparency)
+- HSL → hsl(0,100%,50%) (Hue, Saturation, Lightness)
+- HSLA → hsla(0, 100%, 50%, 0.5); same as HSL but with transparency(opacity)
+
+CSS Units
+
+- Absolute units: fixed size (e.g., px, cm, mm, ...)
+- Relative units: size depends on parent or screen
+- % → relative to parent
+- em → relative to element’s font-size
+- rem → relative to root (html) font-size
+- vh → relative to viewport height
+- vw → relative to viewport width
+
+Box Model (Every element in CSS is a box)
+
+- Content – the actual text or image inside
+- Padding – space between content and border
+- Border – the outline around padding/content
+- Margin – space outside the border (separates from other elements)
+
+CSS Properties
+
+1. Text Properties
+
+- color → text color
+- font-size → controls text size
+- font-family → font style (Arial, Verdana, etc.)
+- font-weight → text thickness (normal, bold, 100–900)
+- text-align → alignment (left, center, right, justify)
+- text-decoration → underline, overline, none
+
+2. Background Properties
+
+- background-color → sets background color
+- background-image → adds background image (url) / gradient colors
+- background-repeat → repeat, no-repeat, repeat-x, repeat-y
+- background-size → cover, contain, or custom size
+- background-position → top, center, left, right
+
+3. Border Properties
+
+- border → shorthand for width, style, color (e.g., 1px solid black)
+- border-radius → rounded corners
+- border-style → solid, dotted, dashed, double
+
+4. Spacing Properties
+
+- margin → space outside border
+- padding → space inside border
+
+5. Display Properties
+
+- block → takes full width of container
+- inline → takes only required space (no new line)
+- inline-block → inline but allows width/height
+- none → hides element
+- flex → enables flexbox layout
+- grid → enables grid layout
+
+6. Positioning
+
+- static → default (normal flow)
+  This is the default position for all elements.
+  Elements are placed in normal document flow (one after another, no special positioning).
+  top, left, right, bottom have no effect.
+
+- relative → Element is positioned relative to its normal position.
+  It still occupies space in the normal flow.
+  You can move it using top, left, right, bottom.
+
+- absolute → Element is positioned relative to the nearest ancestor(parent, grandparent, etc). with position: relative/absolute/fixed/sticky.
+  If no such ancestor exists → it is positioned relative to the <html> (page itself).
+  Removed from normal flow (other elements ignore it).
+
+- fixed → stays in place (even when scrolling)
+  Element is positioned relative to the viewport (browser window).
+  It does not move when the page is scrolled.
+  Commonly used for sticky headers, navigation bars, chat icons.
+
+- sticky → sticks within parent until limit
+  Acts like relative until a certain scroll position is reached,
+  then it behaves like fixed.
+  Useful for table headers or sticky sections.
+  Requires a scrollable parent and works within its parent’s boundaries.
+
+Flexbox (One-Dimensional Layout: row/column)
+
+- display: flex;
+- justify-content → aligns items horizontally (start, center, space-between)
+- align-items → aligns items vertically (center, stretch, baseline)
+- flex-direction → row, column, row-reverse, column-reverse
+- flex-wrap → allows items to wrap into next line
+- flex-grow → defines how items grow if space available
+- flex-shrink → defines how items shrink if needed
+- order → defines the order of items
+
+flex-flow in Flexbox:
+
+- flex-flow is a shorthand property in CSS.
+
+It combines two properties:
+
+- flex-direction (row, column, row-reverse, column-reverse)
+- flex-wrap (nowrap, wrap, wrap-reverse)
+
+Grid (Two-Dimensional Layout)
+
+- display: grid;
+- grid-template-columns → define number/size of columns
+- grid-template-rows → define number/size of rows
+- gap → space between rows and columns
+- grid-column & grid-row → position items
+
+Pseudo-classes & Pseudo-elements
+
+- :hover → when mouse is over element
+- :active → when element is clicked
+- :visited → visited link
+- :link → normal link
+- :first-child → first child element of parent
+- :last-child → last child element of parent
+- :nth-child(n) → nth element in parent
+- :before → insert content before element
+- :after → insert content after element
+
+ Media Queries (Responsive Design)
+
+- Media queries make websites **responsive** (look good on all devices).
+- They apply CSS rules only when certain conditions (like screen width) are met.
+- Commonly used for **mobile, tablet, and desktop layouts**.
+
+ Syntax:
+@media (condition) {
+  selector {
+    property: value;
+  }
+}
+
+--- >  Mobile :
+@media (max-width: 600px) { ... }
+Tablet :
+@media (min-width: 601px) and (max-width: 1024px) { ... }
+Desktop:
+@media (min-width: 1025px) { ... }
+
+Common Breakpoints:
+
+- Extra Small Devices (Phones) → max-width: 600px
+- Small Devices (Tablets, portrait) → 601px – 768px
+- Medium Devices (Tablets, landscape / small laptops) → 769px – 1024px
+- Large Devices (Laptops/Desktops) → 1025px – 1440px
+- Extra Large Devices (Big desktops, TVs) → 1441px and above
+- Helps design mobile-first websites (start from small screens, then scale up).
+- Can check not just width, but also height, orientation (landscape/portrait), and media type (screen,  print).
+
+
+---
+
+## Links :
+
+- https://www.figma.com
+
+- https://colorhunt.co
+
+- https://fontawesome.com/icons
+- https://www.flaticon.com
+- https://lordicon.com
+
+- https://app.haikei.app
+
+- https://themewagon.com
+- https://themeforest.net
+- https://www.cofolios.com
