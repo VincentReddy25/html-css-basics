@@ -267,6 +267,7 @@ Common Breakpoints:
 - https://fontawesome.com/icons
 - https://www.flaticon.com
 - https://lordicon.com
+- https://giphy.com/
 
 - https://app.haikei.app
 
