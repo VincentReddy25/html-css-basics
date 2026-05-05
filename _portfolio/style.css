@@ -116,7 +116,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
-}`
+}
 
 .skills header {
     grid-column: 1 / -1;
