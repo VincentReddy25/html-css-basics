@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+body {
+    background: whitesmoke;
+}
+
+form {
+    padding: 20px;
+    margin: 200px auto;
+
+    box-shadow: 0 0 4px lightgray;
+    border-radius: 3px;
+
+    width: 400px;
+    background: white;
+}
+
+form input {
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 10px 0;
+    
+    width: 100%;
+    border-radius: inherit;
+}
+
+form input[type="submit"] {
+    background: black;
+    color: white;
+    border-color: black;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: white;
+    color: black;
+}
