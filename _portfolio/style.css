@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+
+    --bg-image: url("https://dummyimage.com/hd1080");
+    --shadow: 0 0 3px white
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+section {
+    border: 2px solid white;
+    padding: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 16px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    background: var(--secondary-color);
+}
+
+.navbar nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.hero {
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #000 var(--bg-image) no-repeat center/cover;
+}
+
+.hero p {
+    color: lightgray;
+    font-size: 12px;
+}
+
+.hero a {
+    color: var(--primary-color);
+}
+
+.hero div {
+    margin-top: 20px;
+}
+
+.exp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    padding: 40px;
+}
+
+.exp header {
+    grid-column: 1 / -1;
+}
+
+.exp-card {
+    padding: 10px;
+    box-shadow: var(--shadow);
+    border-radius: 3px;
+}
+
+.exp-card ul {
+    padding: 20px;
+    list-style-type: disc;
+}
+
+.projects {
+    padding: 40px;
+}
+
+.project-card {
+    padding: 10px;
+    margin: 40px 0;
+}
+
+.project-card p a {
+    color: var(--primary-color);
+}
+
+.project-card ul {
+    padding: 20px;
+    list-style-type: disc;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}`
+
+.skills header {
+    grid-column: 1 / -1;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border: 2px solid white;
+}
+
