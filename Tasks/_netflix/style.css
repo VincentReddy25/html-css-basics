@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: #e50914;
+    --image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4q65ZhTdGQDppNA9yRE6ntms7rBPtFVqcAg&s")
+}
+
+.container-hero {
+    background: #000 var(--image) no-repeat center/cover;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2em 2em;
+
+    width: 80%;
+    margin-inline: auto;
+}
+
+.navbar svg {
+    width: 120px;
+    fill: var(--primary-color);
+}
+
+.navbar select {
+    padding: .5em 1em;
+    border-radius: 3px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    background: var(--primary-color);
+    padding: .5em 1em;
+    border-radius: 3px;
+}
+
+.navbar select {
+    background: #000;
+    color: white;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero > p {
+    margin: 10px 0;
+}
+
+.hero .title {
+    font-size: 60px;
+    font-weight: bold;
+    width: 50%;
+    text-align: center;
+}
+
+.hero div {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 60% auto;
+    gap: 1em;
+}
+
+.hero div input {
+    padding: 1.3em;
+    border-radius: 3px;
+    background: #000;
+    border: 1px solid gray;
+    color: white;
+}
+
+.hero div input[type="submit"] {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
